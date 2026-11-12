@@ -1,0 +1,146 @@
+/* Dark mode container */
+.login-container.dark {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111827; /* Deep gray */
+  color: #E5E7EB; /* Light text */
+}
+
+.login-form.dark {
+  background-color: #1F2937; /* Dark card */
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-form.dark h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #60A5FA; /* Indigo accent */
+}
+
+.login-form.dark input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #374151;
+  background-color: #111827;
+  color: #E5E7EB;
+}
+
+.login-form.dark input::placeholder {
+  color: #9CA3AF;
+}
+
+.login-form.dark button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-form.dark button[type="submit"] {
+  background-color: #3B82F6; /* Blue accent */
+  color: white;
+}
+
+.login-form.dark button[type="submit"]:hover {
+  background-color: #2563EB;
+}
+
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #F3F4F6;
+  color: #111827;
+}
+
+.google-btn:hover {
+  background-color: #E5E7EB;
+}
+
+.google-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.divider {
+  text-align: center;
+  margin: 1rem 0;
+  color: #9CA3AF;
+}
+
+.switch-btn {
+  background: none;
+  border: none;
+  color: #60A5FA;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.error {
+  color: #F87171; /* Soft red */
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* User info dark styling */
+.user-info-container.dark {
+  min-height: 100vh;
+  background-color: #111827;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #E5E7EB;
+}
+
+.user-avatar img.circular-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.logout-btn {
+  margin-top: 1rem;
+  background-color: #EF4444;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #DC2626;
+}
+
+.createbio{
+  width: 100%;
+  background-color: #374151;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.add-skill-btn{
+  background-color: #2563EB;
+  margin-bottom: 20px;
+}
+.skills-display-container{
+  background-color: #1F2937;
+}
+
+.skill-tag{
+  background-color: #374151;
+}

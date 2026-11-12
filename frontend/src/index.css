@@ -1,3 +1,101 @@
+/* src/index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background-color: #111827; /* bg-gray-900 */
+}
+
+/* Reusable Feature Card Component Class */
+@layer components {
+  .feature-card {
+    @apply bg-gray-800 p-8 rounded-2xl transition-all duration-300 relative overflow-hidden transform hover:-translate-y-2;
+  }
+  /* Pseudo-element for the hover glow effect */
+  .feature-card:before {
+    content: '';
+    @apply absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-r from-indigo-500 via-pink-500 to-indigo-500;
+    transform: rotate(20deg);
+    transition: all 0.5s;
+    opacity: 0;
+  }
+  .feature-card:hover:before {
+    transform: rotate(20deg) scale(2);
+    opacity: 0.1;
+  }
+}
+
+/* Animated Gradient for Hero Section */
+.animated-gradient {
+  background-size: 300%;
+  background-image: linear-gradient(
+    -45deg,
+    rgba(129, 140, 248, 0.1) 0%, /* indigo-400 with opacity */
+    rgba(236, 72, 153, 0.1) 25%,   /* pink-500 with opacity */
+    rgba(28, 25, 23, 0.1) 51%,
+    rgba(129, 140, 248, 0.1) 100% /* indigo-400 with opacity */
+  );
+  animation: AnimateBG 20s ease infinite;
+}
+
+@keyframes AnimateBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Simple Fade-in Animation for Page Load */
+.fade-in {
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+/* Add these new keyframes and classes for the hero animations */
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Classes to apply the animations */
+.animate-slide-in-left {
+  animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInFromRight 1s ease-out forwards;
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #818cf8; } /* This is Tailwind's indigo-400 */
+}
+
+.animate-blink {
+  animation: blink-caret 0.75s step-end infinite;
+}
